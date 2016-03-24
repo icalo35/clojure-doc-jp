@@ -1,0 +1,29 @@
+{:e
+ {:brief "TODO",
+  :docjp
+  "REPL utility.  Prints a brief stack trace for the root cause of the\n  most recent exception.",
+  :tips "TODO"},
+ :print-cause-trace
+ {:brief "TODO",
+  :docjp
+  "Like print-stack-trace but prints chained exceptions (causes).",
+  :tips "TODO"},
+ :print-stack-trace
+ {:brief "TODO",
+  :docjp
+  "Prints a Clojure-oriented stack trace of tr, a Throwable.\n  Prints a maximum of n stack frames (default: unlimited).\n  Does not print chained exceptions (causes).",
+  :tips "TODO"},
+ :print-throwable
+ {:brief "TODO",
+  :docjp "Prints the class and message of a Throwable.",
+  :tips "TODO"},
+ :print-trace-element
+ {:brief "TODO",
+  :docjp
+  "Prints a Clojure-oriented view of one element in a stack trace.",
+  :tips "TODO"},
+ :root-cause
+ {:brief "TODO",
+  :docjp
+  "Returns the last 'cause' Throwable in a chain of Throwables.",
+  :tips "TODO"}}

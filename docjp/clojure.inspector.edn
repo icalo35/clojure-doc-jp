@@ -1,0 +1,25 @@
+{:atom? {:brief "TODO", :docjp nil, :tips "TODO"},
+ :collection-tag {:brief "TODO", :docjp nil, :tips "TODO"},
+ :get-child {:brief "TODO", :docjp nil, :tips "TODO"},
+ :get-child-count {:brief "TODO", :docjp nil, :tips "TODO"},
+ :inspect
+ {:brief "TODO",
+  :docjp
+  "creates a graphical (Swing) inspector on the supplied object",
+  :tips "TODO"},
+ :inspect-table
+ {:brief "TODO",
+  :docjp
+  "creates a graphical (Swing) inspector on the supplied regular\n  data, which must be a sequential data structure of data structures\n  of equal length",
+  :tips "TODO"},
+ :inspect-tree
+ {:brief "TODO",
+  :docjp
+  "creates a graphical (Swing) inspector on the supplied hierarchical data",
+  :tips "TODO"},
+ :is-leaf {:brief "TODO", :docjp nil, :tips "TODO"},
+ :list-model {:brief "TODO", :docjp nil, :tips "TODO"},
+ :list-provider {:brief "TODO", :docjp nil, :tips "TODO"},
+ :old-table-model {:brief "TODO", :docjp nil, :tips "TODO"},
+ :table-model {:brief "TODO", :docjp nil, :tips "TODO"},
+ :tree-model {:brief "TODO", :docjp nil, :tips "TODO"}}

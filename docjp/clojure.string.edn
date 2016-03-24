@@ -1,0 +1,86 @@
+{:blank?
+ {:brief "TODO",
+  :docjp "True if s is nil, empty, or contains only whitespace.",
+  :tips "TODO"},
+ :capitalize
+ {:brief "TODO",
+  :docjp
+  "Converts first character of the string to upper-case, all other\n  characters to lower-case.",
+  :tips "TODO"},
+ :ends-with?
+ {:brief "TODO", :docjp "True if s ends with substr.", :tips "TODO"},
+ :escape
+ {:brief "TODO",
+  :docjp
+  "Return a new string, using cmap to escape each character ch\n   from s as follows:\n   \n   If (cmap ch) is nil, append ch to the new string.\n   If (cmap ch) is non-nil, append (str (cmap ch)) instead.",
+  :tips "TODO"},
+ :includes?
+ {:brief "TODO", :docjp "True if s includes substr.", :tips "TODO"},
+ :index-of
+ {:brief "TODO",
+  :docjp
+  "Return index of value (string or char) in s, optionally searching\n  forward from from-index or nil if not found.",
+  :tips "TODO"},
+ :join
+ {:brief "TODO",
+  :docjp
+  "Returns a string of all elements in coll, as returned by (seq coll),\n   separated by an optional separator.",
+  :tips "TODO"},
+ :last-index-of
+ {:brief "TODO",
+  :docjp
+  "Return last index of value (string or char) in s, optionally\n  searching backward from from-index or nil if not found.",
+  :tips "TODO"},
+ :lower-case
+ {:brief "TODO",
+  :docjp "Converts string to all lower-case.",
+  :tips "TODO"},
+ :re-quote-replacement
+ {:brief "TODO",
+  :docjp
+  "Given a replacement string that you wish to be a literal\n   replacement for a pattern match in replace or replace-first, do the\n   necessary escaping of special characters in the replacement.",
+  :tips "TODO"},
+ :replace
+ {:brief "TODO",
+  :docjp
+  "Replaces all instance of match with replacement in s.\n\n   match/replacement can be:\n\n   string / string\n   char / char\n   pattern / (string or function of match).\n\n   See also replace-first.\n\n   The replacement is literal (i.e. none of its characters are treated\n   specially) for all cases above except pattern / string.\n\n   For pattern / string, $1, $2, etc. in the replacement string are\n   substituted with the string that matched the corresponding\n   parenthesized group in the pattern.  If you wish your replacement\n   string r to be used literally, use (re-quote-replacement r) as the\n   replacement argument.  See also documentation for\n   java.util.regex.Matcher's appendReplacement method.\n\n   Example:\n   (clojure.string/replace \"Almost Pig Latin\" #\"\\b(\\w)(\\w+)\\b\" \"$2$1ay\")\n   -> \"lmostAay igPay atinLay\"",
+  :tips "TODO"},
+ :replace-first
+ {:brief "TODO",
+  :docjp
+  "Replaces the first instance of match with replacement in s.\n\n   match/replacement can be:\n\n   char / char\n   string / string\n   pattern / (string or function of match).\n\n   See also replace.\n\n   The replacement is literal (i.e. none of its characters are treated\n   specially) for all cases above except pattern / string.\n\n   For pattern / string, $1, $2, etc. in the replacement string are\n   substituted with the string that matched the corresponding\n   parenthesized group in the pattern.  If you wish your replacement\n   string r to be used literally, use (re-quote-replacement r) as the\n   replacement argument.  See also documentation for\n   java.util.regex.Matcher's appendReplacement method.\n\n   Example:\n   (clojure.string/replace-first \"swap first two words\"\n                                 #\"(\\w+)(\\s+)(\\w+)\" \"$3$2$1\")\n   -> \"first swap two words\"",
+  :tips "TODO"},
+ :reverse
+ {:brief "TODO",
+  :docjp "Returns s with its characters reversed.",
+  :tips "TODO"},
+ :split
+ {:brief "TODO",
+  :docjp
+  "Splits string on a regular expression.  Optional argument limit is\n  the maximum number of splits. Not lazy. Returns vector of the splits.",
+  :tips "TODO"},
+ :split-lines
+ {:brief "TODO", :docjp "Splits s on \\n or \\r\\n.", :tips "TODO"},
+ :starts-with?
+ {:brief "TODO", :docjp "True if s starts with substr.", :tips "TODO"},
+ :trim
+ {:brief "TODO",
+  :docjp "Removes whitespace from both ends of string.",
+  :tips "TODO"},
+ :trim-newline
+ {:brief "TODO",
+  :docjp
+  "Removes all trailing newline \\n or return \\r characters from\n  string.  Similar to Perl's chomp.",
+  :tips "TODO"},
+ :triml
+ {:brief "TODO",
+  :docjp "Removes whitespace from the left side of string.",
+  :tips "TODO"},
+ :trimr
+ {:brief "TODO",
+  :docjp "Removes whitespace from the right side of string.",
+  :tips "TODO"},
+ :upper-case
+ {:brief "TODO",
+  :docjp "Converts string to all upper-case.",
+  :tips "TODO"}}

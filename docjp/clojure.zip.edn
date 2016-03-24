@@ -1,0 +1,130 @@
+{:append-child
+ {:brief "TODO",
+  :docjp
+  "Inserts the item as the rightmost child of the node at this loc,\n  without moving",
+  :tips "TODO"},
+ :branch?
+ {:brief "TODO",
+  :docjp "Returns true if the node at loc is a branch",
+  :tips "TODO"},
+ :children
+ {:brief "TODO",
+  :docjp
+  "Returns a seq of the children of node at loc, which must be a branch",
+  :tips "TODO"},
+ :down
+ {:brief "TODO",
+  :docjp
+  "Returns the loc of the leftmost child of the node at this loc, or\n  nil if no children",
+  :tips "TODO"},
+ :edit
+ {:brief "TODO",
+  :docjp
+  "Replaces the node at this loc with the value of (f node args)",
+  :tips "TODO"},
+ :end?
+ {:brief "TODO",
+  :docjp
+  "Returns true if loc represents the end of a depth-first walk",
+  :tips "TODO"},
+ :insert-child
+ {:brief "TODO",
+  :docjp
+  "Inserts the item as the leftmost child of the node at this loc,\n  without moving",
+  :tips "TODO"},
+ :insert-left
+ {:brief "TODO",
+  :docjp
+  "Inserts the item as the left sibling of the node at this loc,\n without moving",
+  :tips "TODO"},
+ :insert-right
+ {:brief "TODO",
+  :docjp
+  "Inserts the item as the right sibling of the node at this loc,\n  without moving",
+  :tips "TODO"},
+ :left
+ {:brief "TODO",
+  :docjp
+  "Returns the loc of the left sibling of the node at this loc, or nil",
+  :tips "TODO"},
+ :leftmost
+ {:brief "TODO",
+  :docjp
+  "Returns the loc of the leftmost sibling of the node at this loc, or self",
+  :tips "TODO"},
+ :lefts
+ {:brief "TODO",
+  :docjp "Returns a seq of the left siblings of this loc",
+  :tips "TODO"},
+ :make-node
+ {:brief "TODO",
+  :docjp
+  "Returns a new branch node, given an existing node and new\n  children. The loc is only used to supply the constructor.",
+  :tips "TODO"},
+ :next
+ {:brief "TODO",
+  :docjp
+  "Moves to the next loc in the hierarchy, depth-first. When reaching\n  the end, returns a distinguished loc detectable via end?. If already\n  at the end, stays there.",
+  :tips "TODO"},
+ :node {:brief "TODO", :docjp "Returns the node at loc", :tips "TODO"},
+ :path
+ {:brief "TODO",
+  :docjp "Returns a seq of nodes leading to this loc",
+  :tips "TODO"},
+ :prev
+ {:brief "TODO",
+  :docjp
+  "Moves to the previous loc in the hierarchy, depth-first. If already\n  at the root, returns nil.",
+  :tips "TODO"},
+ :remove
+ {:brief "TODO",
+  :docjp
+  "Removes the node at loc, returning the loc that would have preceded\n  it in a depth-first walk.",
+  :tips "TODO"},
+ :replace
+ {:brief "TODO",
+  :docjp "Replaces the node at this loc, without moving",
+  :tips "TODO"},
+ :right
+ {:brief "TODO",
+  :docjp
+  "Returns the loc of the right sibling of the node at this loc, or nil",
+  :tips "TODO"},
+ :rightmost
+ {:brief "TODO",
+  :docjp
+  "Returns the loc of the rightmost sibling of the node at this loc, or self",
+  :tips "TODO"},
+ :rights
+ {:brief "TODO",
+  :docjp "Returns a seq of the right siblings of this loc",
+  :tips "TODO"},
+ :root
+ {:brief "TODO",
+  :docjp
+  "zips all the way up and returns the root node, reflecting any\n changes.",
+  :tips "TODO"},
+ :seq-zip
+ {:brief "TODO",
+  :docjp
+  "Returns a zipper for nested sequences, given a root sequence",
+  :tips "TODO"},
+ :up
+ {:brief "TODO",
+  :docjp
+  "Returns the loc of the parent of the node at this loc, or nil if at\n  the top",
+  :tips "TODO"},
+ :vector-zip
+ {:brief "TODO",
+  :docjp "Returns a zipper for nested vectors, given a root vector",
+  :tips "TODO"},
+ :xml-zip
+ {:brief "TODO",
+  :docjp
+  "Returns a zipper for xml elements (as from xml/parse),\n  given a root element",
+  :tips "TODO"},
+ :zipper
+ {:brief "TODO",
+  :docjp
+  "Creates a new zipper structure. \n\n  branch? is a fn that, given a node, returns true if can have\n  children, even if it currently doesn't.\n\n  children is a fn that, given a branch node, returns a seq of its\n  children.\n\n  make-node is a fn that, given an existing node and a seq of\n  children, returns a new branch node with the supplied children.\n  root is the root node.",
+  :tips "TODO"}}

@@ -1,0 +1,158 @@
+{:*initial-report-counters* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*load-tests*
+ {:brief "TODO",
+  :docjp
+  "True by default.  If set to false, no test functions will\n   be created by deftest, set-test, or with-test.  Use this to omit\n   tests when compiling or loading production code.",
+  :tips "TODO"},
+ :*report-counters* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*stack-trace-depth*
+ {:brief "TODO",
+  :docjp
+  "The maximum depth of stack traces to print when an Exception\n  is thrown during a test.  Defaults to nil, which means print the \n  complete stack trace.",
+  :tips "TODO"},
+ :*test-out* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*testing-contexts* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*testing-vars* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :are
+ {:brief "TODO",
+  :docjp
+  "Checks multiple assertions with a template expression.\n  See clojure.template/do-template for an explanation of\n  templates.\n\n  Example: (are [x y] (= x y)  \n                2 (+ 1 1)\n                4 (* 2 2))\n  Expands to: \n           (do (is (= 2 (+ 1 1)))\n               (is (= 4 (* 2 2))))\n\n  Note: This breaks some reporting features, such as line numbers.",
+  :tips "TODO"},
+ :assert-any
+ {:brief "TODO",
+  :docjp
+  "Returns generic assertion code for any test, including macros, Java\n  method calls, or isolated symbols.",
+  :tips "TODO"},
+ :assert-expr {:brief "TODO", :docjp nil, :tips "TODO"},
+ :assert-predicate
+ {:brief "TODO",
+  :docjp
+  "Returns generic assertion code for any functional predicate.  The\n  'expected' argument to 'report' will contains the original form, the\n  'actual' argument will contain the form with all its sub-forms\n  evaluated.  If the predicate returns false, the 'actual' form will\n  be wrapped in (not...).",
+  :tips "TODO"},
+ :compose-fixtures
+ {:brief "TODO",
+  :docjp
+  "Composes two fixture functions, creating a new fixture function\n  that combines their behavior.",
+  :tips "TODO"},
+ :deftest
+ {:brief "TODO",
+  :docjp
+  "Defines a test function with no arguments.  Test functions may call\n  other tests, so tests may be composed.  If you compose tests, you\n  should also define a function named test-ns-hook; run-tests will\n  call test-ns-hook instead of testing all vars.\n\n  Note: Actually, the test body goes in the :test metadata on the var,\n  and the real function (the value of the var) calls test-var on\n  itself.\n\n  When *load-tests* is false, deftest is ignored.",
+  :tips "TODO"},
+ :deftest-
+ {:brief "TODO",
+  :docjp "Like deftest but creates a private var.",
+  :tips "TODO"},
+ :do-report
+ {:brief "TODO",
+  :docjp
+  "Add file and line information to a test result and call report.\n   If you are writing a custom assert-expr method, call this function\n   to pass test results to report.",
+  :tips "TODO"},
+ :file-position
+ {:brief "TODO",
+  :docjp
+  "Returns a vector [filename line-number] for the nth call up the\n  stack.\n\n  Deprecated in 1.2: The information needed for test reporting is\n  now on :file and :line keys in the result map.",
+  :tips "TODO"},
+ :function?
+ {:brief "TODO",
+  :docjp
+  "Returns true if argument is a function or a symbol that resolves to\n  a function (not a macro).",
+  :tips "TODO"},
+ :get-possibly-unbound-var
+ {:brief "TODO",
+  :docjp "Like var-get but returns nil if the var is unbound.",
+  :tips "TODO"},
+ :inc-report-counter
+ {:brief "TODO",
+  :docjp
+  "Increments the named counter in *report-counters*, a ref to a map.\n  Does nothing if *report-counters* is nil.",
+  :tips "TODO"},
+ :is
+ {:brief "TODO",
+  :docjp
+  "Generic assertion macro.  'form' is any predicate test.\n  'msg' is an optional message to attach to the assertion.\n  \n  Example: (is (= 4 (+ 2 2)) \"Two plus two should be 4\")\n\n  Special forms:\n\n  (is (thrown? c body)) checks that an instance of c is thrown from\n  body, fails if not; then returns the thing thrown.\n\n  (is (thrown-with-msg? c re body)) checks that an instance of c is\n  thrown AND that the message on the exception matches (with\n  re-find) the regular expression re.",
+  :tips "TODO"},
+ :join-fixtures
+ {:brief "TODO",
+  :docjp
+  "Composes a collection of fixtures, in order.  Always returns a valid\n  fixture function, even if the collection is empty.",
+  :tips "TODO"},
+ :report
+ {:brief "TODO",
+  :docjp
+  "Generic reporting function, may be overridden to plug in\n   different report formats (e.g., TAP, JUnit).  Assertions such as\n   'is' call 'report' to indicate results.  The argument given to\n   'report' will be a map with a :type key.  See the documentation at\n   the top of test_is.clj for more information on the types of\n   arguments for 'report'.",
+  :tips "TODO"},
+ :run-all-tests
+ {:brief "TODO",
+  :docjp
+  "Runs all tests in all namespaces; prints results.\n  Optional argument is a regular expression; only namespaces with\n  names matching the regular expression (with re-matches) will be\n  tested.",
+  :tips "TODO"},
+ :run-tests
+ {:brief "TODO",
+  :docjp
+  "Runs all tests in the given namespaces; prints results.\n  Defaults to current namespace if none given.  Returns a map\n  summarizing test results.",
+  :tips "TODO"},
+ :set-test
+ {:brief "TODO",
+  :docjp
+  "Experimental.\n  Sets :test metadata of the named var to a fn with the given body.\n  The var must already exist.  Does not modify the value of the var.\n\n  When *load-tests* is false, set-test is ignored.",
+  :tips "TODO"},
+ :successful?
+ {:brief "TODO",
+  :docjp
+  "Returns true if the given test summary indicates all tests\n  were successful, false otherwise.",
+  :tips "TODO"},
+ :test-all-vars
+ {:brief "TODO",
+  :docjp
+  "Calls test-vars on every var interned in the namespace, with fixtures.",
+  :tips "TODO"},
+ :test-ns
+ {:brief "TODO",
+  :docjp
+  "If the namespace defines a function named test-ns-hook, calls that.\n  Otherwise, calls test-all-vars on the namespace.  'ns' is a\n  namespace object or a symbol.\n\n  Internally binds *report-counters* to a ref initialized to\n  *initial-report-counters*.  Returns the final, dereferenced state of\n  *report-counters*.",
+  :tips "TODO"},
+ :test-var
+ {:brief "TODO",
+  :docjp
+  "If v has a function in its :test metadata, calls that function,\n  with *testing-vars* bound to (conj *testing-vars* v).",
+  :tips "TODO"},
+ :test-vars
+ {:brief "TODO",
+  :docjp
+  "Groups vars by their namespace and runs test-vars on them with\n   appropriate fixtures applied.",
+  :tips "TODO"},
+ :testing
+ {:brief "TODO",
+  :docjp
+  "Adds a new string to the list of testing contexts.  May be nested,\n  but must occur inside a test function (deftest).",
+  :tips "TODO"},
+ :testing-contexts-str
+ {:brief "TODO",
+  :docjp
+  "Returns a string representation of the current test context. Joins\n  strings in *testing-contexts* with spaces.",
+  :tips "TODO"},
+ :testing-vars-str
+ {:brief "TODO",
+  :docjp
+  "Returns a string representation of the current test.  Renders names\n  in *testing-vars* as a list, then the source file and line of\n  current assertion.",
+  :tips "TODO"},
+ :try-expr
+ {:brief "TODO",
+  :docjp
+  "Used by the 'is' macro to catch unexpected exceptions.\n  You don't call this.",
+  :tips "TODO"},
+ :use-fixtures
+ {:brief "TODO",
+  :docjp
+  "Wrap test runs in a fixture function to perform setup and\n  teardown. Using a fixture-type of :each wraps every test\n  individually, while :once wraps the whole run in a single function.",
+  :tips "TODO"},
+ :with-test
+ {:brief "TODO",
+  :docjp
+  "Takes any definition form (that returns a Var) as the first argument.\n  Remaining body goes in the :test metadata function for that Var.\n\n  When *load-tests* is false, only evaluates the definition, ignoring\n  the tests.",
+  :tips "TODO"},
+ :with-test-out
+ {:brief "TODO",
+  :docjp "Runs body with *out* bound to the value of *test-out*.",
+  :tips "TODO"}}

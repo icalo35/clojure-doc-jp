@@ -1,0 +1,48 @@
+{:keywordize-keys
+ {:brief "TODO",
+  :docjp
+  "Recursively transforms all map keys from strings to keywords.",
+  :tips "TODO"},
+ :macroexpand-all
+ {:brief "TODO",
+  :docjp "Recursively performs all possible macroexpansions in form.",
+  :tips "TODO"},
+ :postwalk
+ {:brief "TODO",
+  :docjp
+  "Performs a depth-first, post-order traversal of form.  Calls f on\n  each sub-form, uses f's return value in place of the original.\n  Recognizes all Clojure data structures. Consumes seqs as with doall.",
+  :tips "TODO"},
+ :postwalk-demo
+ {:brief "TODO",
+  :docjp
+  "Demonstrates the behavior of postwalk by printing each form as it is\n  walked.  Returns form.",
+  :tips "TODO"},
+ :postwalk-replace
+ {:brief "TODO",
+  :docjp
+  "Recursively transforms form by replacing keys in smap with their\n  values.  Like clojure/replace but works on any data structure.  Does\n  replacement at the leaves of the tree first.",
+  :tips "TODO"},
+ :prewalk
+ {:brief "TODO",
+  :docjp "Like postwalk, but does pre-order traversal.",
+  :tips "TODO"},
+ :prewalk-demo
+ {:brief "TODO",
+  :docjp
+  "Demonstrates the behavior of prewalk by printing each form as it is\n  walked.  Returns form.",
+  :tips "TODO"},
+ :prewalk-replace
+ {:brief "TODO",
+  :docjp
+  "Recursively transforms form by replacing keys in smap with their\n  values.  Like clojure/replace but works on any data structure.  Does\n  replacement at the root of the tree first.",
+  :tips "TODO"},
+ :stringify-keys
+ {:brief "TODO",
+  :docjp
+  "Recursively transforms all map keys from keywords to strings.",
+  :tips "TODO"},
+ :walk
+ {:brief "TODO",
+  :docjp
+  "Traverses form, an arbitrary data structure.  inner and outer are\n  functions.  Applies inner to each element of form, building up a\n  data structure of the same type, then applies outer to the result.\n  Recognizes all Clojure data structures. Consumes seqs as with doall.",
+  :tips "TODO"}}

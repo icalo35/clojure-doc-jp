@@ -1,0 +1,19 @@
+{:*core-java-api* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*feeling-lucky* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*feeling-lucky-url* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*local-javadocs* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*remote-javadocs* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :add-local-javadoc
+ {:brief "TODO",
+  :docjp "Adds to the list of local Javadoc paths.",
+  :tips "TODO"},
+ :add-remote-javadoc
+ {:brief "TODO",
+  :docjp
+  "Adds to the list of remote Javadoc URLs.  package-prefix is the\n  beginning of the package name that has docs at this URL.",
+  :tips "TODO"},
+ :javadoc
+ {:brief "TODO",
+  :docjp
+  "Opens a browser window displaying the javadoc for the argument.\n  Tries *local-javadocs* first, then *remote-javadocs*.",
+  :tips "TODO"}}

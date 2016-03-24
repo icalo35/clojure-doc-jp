@@ -1,0 +1,80 @@
+{:Coercions
+ {:brief "TODO",
+  :docjp "Coerce between various 'resource-namish' things.",
+  :tips "TODO"},
+ :IOFactory
+ {:brief "TODO",
+  :docjp
+  "Factory functions that create ready-to-use, buffered versions of\n   the various Java I/O stream types, on top of anything that can\n   be unequivocally converted to the requested kind of stream.\n\n   Common options include\n   \n     :append    true to open stream in append mode\n     :encoding  string name of encoding to use, e.g. \"UTF-8\".\n\n   Callers should generally prefer the higher level API provided by\n   reader, writer, input-stream, and output-stream.",
+  :tips "TODO"},
+ :as-file
+ {:brief "TODO", :docjp "Coerce argument to a file.", :tips "TODO"},
+ :as-relative-path
+ {:brief "TODO",
+  :docjp
+  "Take an as-file-able thing and return a string if it is\n   a relative path, else IllegalArgumentException.",
+  :tips "TODO"},
+ :as-url
+ {:brief "TODO", :docjp "Coerce argument to a URL.", :tips "TODO"},
+ :copy
+ {:brief "TODO",
+  :docjp
+  "Copies input to output.  Returns nil or throws IOException.\n  Input may be an InputStream, Reader, File, byte[], or String.\n  Output may be an OutputStream, Writer, or File.\n\n  Options are key/value pairs and may be one of\n\n    :buffer-size  buffer size to use, default is 1024.\n    :encoding     encoding to use if converting between\n                  byte and char streams.   \n\n  Does not close any streams except those it opens itself \n  (on a File).",
+  :tips "TODO"},
+ :default-streams-impl {:brief "TODO", :docjp nil, :tips "TODO"},
+ :delete-file
+ {:brief "TODO",
+  :docjp
+  "Delete file f. Raise an exception if it fails unless silently is true.",
+  :tips "TODO"},
+ :file
+ {:brief "TODO",
+  :docjp
+  "Returns a java.io.File, passing each arg to as-file.  Multiple-arg\n   versions treat the first argument as parent and subsequent args as\n   children relative to the parent.",
+  :tips "TODO"},
+ :input-stream
+ {:brief "TODO",
+  :docjp
+  "Attempts to coerce its argument into an open java.io.InputStream.\n   Default implementations always return a java.io.BufferedInputStream.\n\n   Default implementations are defined for InputStream, File, URI, URL,\n   Socket, byte array, and String arguments.\n\n   If the argument is a String, it tries to resolve it first as a URI, then\n   as a local file name.  URIs with a 'file' protocol are converted to\n   local file names.\n\n   Should be used inside with-open to ensure the InputStream is properly\n   closed.",
+  :tips "TODO"},
+ :make-input-stream
+ {:brief "TODO",
+  :docjp "Creates a BufferedInputStream. See also IOFactory docs.",
+  :tips "TODO"},
+ :make-output-stream
+ {:brief "TODO",
+  :docjp "Creates a BufferedOutputStream. See also IOFactory docs.",
+  :tips "TODO"},
+ :make-parents
+ {:brief "TODO",
+  :docjp
+  "Given the same arg(s) as for file, creates all parent directories of\n   the file they represent.",
+  :tips "TODO"},
+ :make-reader
+ {:brief "TODO",
+  :docjp "Creates a BufferedReader. See also IOFactory docs.",
+  :tips "TODO"},
+ :make-writer
+ {:brief "TODO",
+  :docjp "Creates a BufferedWriter. See also IOFactory docs.",
+  :tips "TODO"},
+ :output-stream
+ {:brief "TODO",
+  :docjp
+  "Attempts to coerce its argument into an open java.io.OutputStream.\n   Default implementations always return a java.io.BufferedOutputStream.\n\n   Default implementations are defined for OutputStream, File, URI, URL,\n   Socket, and String arguments.\n\n   If the argument is a String, it tries to resolve it first as a URI, then\n   as a local file name.  URIs with a 'file' protocol are converted to\n   local file names.\n\n   Should be used inside with-open to ensure the OutputStream is\n   properly closed.",
+  :tips "TODO"},
+ :reader
+ {:brief "TODO",
+  :docjp
+  "Attempts to coerce its argument into an open java.io.Reader.\n   Default implementations always return a java.io.BufferedReader.\n\n   Default implementations are provided for Reader, BufferedReader,\n   InputStream, File, URI, URL, Socket, byte arrays, character arrays,\n   and String.\n\n   If argument is a String, it tries to resolve it first as a URI, then\n   as a local file name.  URIs with a 'file' protocol are converted to\n   local file names.\n\n   Should be used inside with-open to ensure the Reader is properly\n   closed.",
+  :tips "TODO"},
+ :resource
+ {:brief "TODO",
+  :docjp
+  "Returns the URL for a named resource. Use the context class loader\n   if no loader is specified.",
+  :tips "TODO"},
+ :writer
+ {:brief "TODO",
+  :docjp
+  "Attempts to coerce its argument into an open java.io.Writer.\n   Default implementations always return a java.io.BufferedWriter.\n\n   Default implementations are provided for Writer, BufferedWriter,\n   OutputStream, File, URI, URL, Socket, and String.\n\n   If the argument is a String, it tries to resolve it first as a URI, then\n   as a local file name.  URIs with a 'file' protocol are converted to\n   local file names.\n\n   Should be used inside with-open to ensure the Writer is properly\n   closed.",
+  :tips "TODO"}}

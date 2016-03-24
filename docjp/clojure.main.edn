@@ -1,0 +1,68 @@
+{:demunge
+ {:brief "TODO",
+  :docjp
+  "Given a string representation of a fn class,\n  as in a stack trace element, returns a readable version.",
+  :tips "TODO"},
+ :load-script
+ {:brief "TODO",
+  :docjp
+  "Loads Clojure source from a file or resource given its path. Paths\n  beginning with @ or @/ are considered relative to classpath.",
+  :tips "TODO"},
+ :main
+ {:brief "TODO",
+  :docjp
+  "Usage: java -cp clojure.jar clojure.main [init-opt*] [main-opt] [arg*]\n\n  With no options or args, runs an interactive Read-Eval-Print Loop\n\n  init options:\n    -i, --init path     Load a file or resource\n    -e, --eval string   Evaluate expressions in string; print non-nil values\n\n  main options:\n    -m, --main ns-name  Call the -main function from a namespace with args\n    -r, --repl          Run a repl\n    path                Run a script from a file or resource\n    -                   Run a script from standard input\n    -h, -?, --help      Print this help message and exit\n\n  operation:\n\n    - Establishes thread-local bindings for commonly set!-able vars\n    - Enters the user namespace\n    - Binds *command-line-args* to a seq of strings containing command line\n      args that appear after any main option\n    - Runs all init options in order\n    - Calls a -main function or runs a repl or script if requested\n\n  The init options may be repeated and mixed freely, but must appear before\n  any main option. The appearance of any eval option before running a repl\n  suppresses the usual repl greeting message: \"Clojure ~(clojure-version)\".\n\n  Paths may be absolute or relative in the filesystem or relative to\n  classpath. Classpath-relative paths have prefix of @ or @/",
+  :tips "TODO"},
+ :repl
+ {:brief "TODO",
+  :docjp
+  "Generic, reusable, read-eval-print loop. By default, reads from *in*,\n  writes to *out*, and prints exception summaries to *err*. If you use the\n  default :read hook, *in* must either be an instance of\n  LineNumberingPushbackReader or duplicate its behavior of both supporting\n  .unread and collapsing CR, LF, and CRLF into a single \\newline. Options\n  are sequential keyword-value pairs. Available options and their defaults:\n\n     - :init, function of no arguments, initialization hook called with\n       bindings for set!-able vars in place.\n       default: #()\n\n     - :need-prompt, function of no arguments, called before each\n       read-eval-print except the first, the user will be prompted if it\n       returns true.\n       default: (if (instance? LineNumberingPushbackReader *in*)\n                  #(.atLineStart *in*)\n                  #(identity true))\n\n     - :prompt, function of no arguments, prompts for more input.\n       default: repl-prompt\n\n     - :flush, function of no arguments, flushes output\n       default: flush\n\n     - :read, function of two arguments, reads from *in*:\n         - returns its first argument to request a fresh prompt\n           - depending on need-prompt, this may cause the repl to prompt\n             before reading again\n         - returns its second argument to request an exit from the repl\n         - else returns the next object read from the input stream\n       default: repl-read\n\n     - :eval, function of one argument, returns the evaluation of its\n       argument\n       default: eval\n\n     - :print, function of one argument, prints its argument to the output\n       default: prn\n\n     - :caught, function of one argument, a throwable, called when\n       read, eval, or print throws an exception or error\n       default: repl-caught",
+  :tips "TODO"},
+ :repl-caught
+ {:brief "TODO", :docjp "Default :caught hook for repl", :tips "TODO"},
+ :repl-exception
+ {:brief "TODO",
+  :docjp "Returns the root cause of throwables",
+  :tips "TODO"},
+ :repl-prompt
+ {:brief "TODO", :docjp "Default :prompt hook for repl", :tips "TODO"},
+ :repl-read
+ {:brief "TODO",
+  :docjp
+  "Default :read hook for repl. Reads from *in* which must either be an\n  instance of LineNumberingPushbackReader or duplicate its behavior of both\n  supporting .unread and collapsing all of CR, LF, and CRLF into a single\n  \\newline. repl-read:\n    - skips whitespace, then\n      - returns request-prompt on start of line, or\n      - returns request-exit on end of stream, or\n      - reads an object from the input stream, then\n        - skips the next input character if it's end of line, then\n        - returns the object.",
+  :tips "TODO"},
+ :repl-requires
+ {:brief "TODO",
+  :docjp
+  "A sequence of lib specs that are applied to `require`\nby default when a new command-line REPL is started.",
+  :tips "TODO"},
+ :root-cause
+ {:brief "TODO",
+  :docjp
+  "Returns the initial cause of an exception or error by peeling off all of\n  its wrappers",
+  :tips "TODO"},
+ :skip-if-eol
+ {:brief "TODO",
+  :docjp
+  "If the next character on stream s is a newline, skips it, otherwise\n  leaves the stream untouched. Returns :line-start, :stream-end, or :body\n  to indicate the relative location of the next character on s. The stream\n  must either be an instance of LineNumberingPushbackReader or duplicate\n  its behavior of both supporting .unread and collapsing all of CR, LF, and\n  CRLF to a single \\newline.",
+  :tips "TODO"},
+ :skip-whitespace
+ {:brief "TODO",
+  :docjp
+  "Skips whitespace characters on stream s. Returns :line-start, :stream-end,\n  or :body to indicate the relative location of the next character on s.\n  Interprets comma as whitespace and semicolon as comment to end of line.\n  Does not interpret #! as comment to end of line because only one\n  character of lookahead is available. The stream must either be an\n  instance of LineNumberingPushbackReader or duplicate its behavior of both\n  supporting .unread and collapsing all of CR, LF, and CRLF to a single\n  \\newline.",
+  :tips "TODO"},
+ :stack-element-str
+ {:brief "TODO",
+  :docjp
+  "Returns a (possibly unmunged) string representation of a StackTraceElement",
+  :tips "TODO"},
+ :with-bindings
+ {:brief "TODO",
+  :docjp
+  "Executes body in the context of thread-local bindings for several vars\n  that often need to be set!: *ns* *warn-on-reflection* *math-context*\n  *print-meta* *print-length* *print-level* *compile-path*\n  *command-line-args* *1 *2 *3 *e",
+  :tips "TODO"},
+ :with-read-known
+ {:brief "TODO",
+  :docjp
+  "Evaluates body with *read-eval* set to a \"known\" value,\n   i.e. substituting true for :unknown if necessary.",
+  :tips "TODO"}}

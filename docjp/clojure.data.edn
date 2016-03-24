@@ -1,0 +1,21 @@
+{:Diff
+ {:brief "TODO",
+  :docjp "Implementation detail. Subject to change.",
+  :tips "TODO"},
+ :EqualityPartition
+ {:brief "TODO",
+  :docjp "Implementation detail. Subject to change.",
+  :tips "TODO"},
+ :diff
+ {:brief "TODO",
+  :docjp
+  "Recursively compares a and b, returning a tuple of\n  [things-only-in-a things-only-in-b things-in-both].\n  Comparison rules:\n\n  * For equal a and b, return [nil nil a].\n  * Maps are subdiffed where keys match and values differ.\n  * Sets are never subdiffed.\n  * All sequential things are treated as associative collections\n    by their indexes, with results returned as vectors.\n  * Everything else (including strings!) is treated as\n    an atom and compared for equality.",
+  :tips "TODO"},
+ :diff-similar
+ {:brief "TODO",
+  :docjp "Implementation detail. Subject to change.",
+  :tips "TODO"},
+ :equality-partition
+ {:brief "TODO",
+  :docjp "Implementation detail. Subject to change.",
+  :tips "TODO"}}

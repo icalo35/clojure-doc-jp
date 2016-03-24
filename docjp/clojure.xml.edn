@@ -1,0 +1,17 @@
+{:*current* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*sb* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*stack* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :*state* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :attrs {:brief "TODO", :docjp nil, :tips "TODO"},
+ :content {:brief "TODO", :docjp nil, :tips "TODO"},
+ :content-handler {:brief "TODO", :docjp nil, :tips "TODO"},
+ :element {:brief "TODO", :docjp nil, :tips "TODO"},
+ :emit {:brief "TODO", :docjp nil, :tips "TODO"},
+ :emit-element {:brief "TODO", :docjp nil, :tips "TODO"},
+ :parse
+ {:brief "TODO",
+  :docjp
+  "Parses and loads the source s, which can be a File, InputStream or\n  String naming a URI. Returns a tree of the xml/element struct-map,\n  which has the keys :tag, :attrs, and :content. and accessor fns tag,\n  attrs, and content. Other parsers can be supplied by passing\n  startparse, a fn taking a source and a ContentHandler and returning\n  a parser",
+  :tips "TODO"},
+ :startparse-sax {:brief "TODO", :docjp nil, :tips "TODO"},
+ :tag {:brief "TODO", :docjp nil, :tips "TODO"}}

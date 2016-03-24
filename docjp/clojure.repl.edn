@@ -1,0 +1,64 @@
+{:apropos
+ {:brief "TODO",
+  :docjp
+  "Given a regular expression or stringable thing, return a seq of all\npublic definitions in all currently-loaded namespaces that match the\nstr-or-pattern.",
+  :tips "TODO"},
+ :demunge
+ {:brief "TODO",
+  :docjp
+  "Given a string representation of a fn class,\n  as in a stack trace element, returns a readable version.",
+  :tips "TODO"},
+ :dir
+ {:brief "TODO",
+  :docjp "Prints a sorted directory of public vars in a namespace",
+  :tips "TODO"},
+ :dir-fn
+ {:brief "TODO",
+  :docjp
+  "Returns a sorted seq of symbols naming public vars in\n  a namespace",
+  :tips "TODO"},
+ :doc
+ {:brief "TODO",
+  :docjp
+  "Prints documentation for a var or special form given its name",
+  :tips "TODO"},
+ :find-doc
+ {:brief "TODO",
+  :docjp
+  "Prints documentation for any var whose documentation or name\n contains a match for re-string-or-pattern",
+  :tips "TODO"},
+ :pst
+ {:brief "TODO",
+  :docjp
+  "Prints a stack trace of the exception, to the depth requested. If none supplied, uses the root cause of the\n  most recent repl exception (*e), and a depth of 12.",
+  :tips "TODO"},
+ :root-cause
+ {:brief "TODO",
+  :docjp
+  "Returns the initial cause of an exception or error by peeling off all of\n  its wrappers",
+  :tips "TODO"},
+ :set-break-handler!
+ {:brief "TODO",
+  :docjp
+  "Register INT signal handler.  After calling this, Ctrl-C will cause\n  the given function f to be called with a single argument, the signal.\n  Uses thread-stopper if no function given.",
+  :tips "TODO"},
+ :source
+ {:brief "TODO",
+  :docjp
+  "Prints the source code for the given symbol, if it can find it.\n  This requires that the symbol resolve to a Var defined in a\n  namespace for which the .clj is in the classpath.\n\n  Example: (source filter)",
+  :tips "TODO"},
+ :source-fn
+ {:brief "TODO",
+  :docjp
+  "Returns a string of the source code for the given symbol, if it can\n  find it.  This requires that the symbol resolve to a Var defined in\n  a namespace for which the .clj is in the classpath.  Returns nil if\n  it can't find the source.  For most REPL usage, 'source' is more\n  convenient.\n\n  Example: (source-fn 'filter)",
+  :tips "TODO"},
+ :stack-element-str
+ {:brief "TODO",
+  :docjp
+  "Returns a (possibly unmunged) string representation of a StackTraceElement",
+  :tips "TODO"},
+ :thread-stopper
+ {:brief "TODO",
+  :docjp
+  "Returns a function that takes one arg and uses that as an exception message\n  to stop the given thread.  Defaults to the current thread",
+  :tips "TODO"}}

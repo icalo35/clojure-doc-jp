@@ -1,0 +1,128 @@
+{:*print-base*
+ {:brief "TODO",
+  :docjp "The base to use for printing integers and rationals.",
+  :tips "TODO"},
+ :*print-miser-width*
+ {:brief "TODO",
+  :docjp
+  "The column at which to enter miser style. Depending on the dispatch table, \nmiser style add newlines in more places to try to keep lines short allowing for further \nlevels of nesting.",
+  :tips "TODO"},
+ :*print-pprint-dispatch*
+ {:brief "TODO",
+  :docjp
+  "The pretty print dispatch function. Use with-pprint-dispatch or set-pprint-dispatch\nto modify.",
+  :tips "TODO"},
+ :*print-pretty*
+ {:brief "TODO",
+  :docjp "Bind to true if you want write to use pretty printing",
+  :tips "TODO"},
+ :*print-radix*
+ {:brief "TODO",
+  :docjp
+  "Print a radix specifier in front of integers and rationals. If *print-base* is 2, 8, \nor 16, then the radix specifier used is #b, #o, or #x, respectively. Otherwise the \nradix specifier is in the form #XXr where XX is the decimal value of *print-base* ",
+  :tips "TODO"},
+ :*print-right-margin*
+ {:brief "TODO",
+  :docjp
+  "Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all \nnon-mandatory newlines.",
+  :tips "TODO"},
+ :*print-suppress-namespaces*
+ {:brief "TODO",
+  :docjp
+  "Don't print namespaces with symbols. This is particularly useful when \npretty printing the results of macro expansions",
+  :tips "TODO"},
+ :cl-format
+ {:brief "TODO",
+  :docjp
+  "An implementation of a Common Lisp compatible format function. cl-format formats its\narguments to an output stream or string based on the format control string given. It \nsupports sophisticated formatting of structured data.\n\nWriter is an instance of java.io.Writer, true to output to *out* or nil to output \nto a string, format-in is the format control string and the remaining arguments \nare the data to be formatted.\n\nThe format control string is a string to be output with embedded 'format directives' \ndescribing how to format the various arguments passed in.\n\nIf writer is nil, cl-format returns the formatted result string. Otherwise, cl-format \nreturns nil.\n\nFor example:\n (let [results [46 38 22]]\n        (cl-format true \"There ~[are~;is~:;are~]~:* ~d result~:p: ~{~d~^, ~}~%\" \n                   (count results) results))\n\nPrints to *out*:\n There are 3 results: 46, 38, 22\n\nDetailed documentation on format control strings is available in the \"Common Lisp the \nLanguage, 2nd edition\", Chapter 22 (available online at:\nhttp://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/html/cltl/clm/node200.html#SECTION002633000000000000000) \nand in the Common Lisp HyperSpec at \nhttp://www.lispworks.com/documentation/HyperSpec/Body/22_c.htm\n",
+  :tips "TODO"},
+ :code-dispatch
+ {:brief "TODO",
+  :docjp
+  "The pretty print dispatch function for pretty printing Clojure code.",
+  :tips "TODO"},
+ :formatter
+ {:brief "TODO",
+  :docjp
+  "Makes a function which can directly run format-in. The function is\nfn [stream & args] ... and returns nil unless the stream is nil (meaning \noutput to a string) in which case it returns the resulting string.\n\nformat-in can be either a control string or a previously compiled format.",
+  :tips "TODO"},
+ :formatter-out
+ {:brief "TODO",
+  :docjp
+  "Makes a function which can directly run format-in. The function is\nfn [& args] ... and returns nil. This version of the formatter macro is\ndesigned to be used with *out* set to an appropriate Writer. In particular,\nthis is meant to be used as part of a pretty printer dispatch method.\n\nformat-in can be either a control string or a previously compiled format.",
+  :tips "TODO"},
+ :fresh-line
+ {:brief "TODO",
+  :docjp
+  "Make a newline if *out* is not already at the beginning of the line. If *out* is\nnot a pretty writer (which keeps track of columns), this function always outputs a newline.",
+  :tips "TODO"},
+ :get-pretty-writer
+ {:brief "TODO",
+  :docjp
+  "Returns the java.io.Writer passed in wrapped in a pretty writer proxy, unless it's \nalready a pretty writer. Generally, it is unnecessary to call this function, since pprint,\nwrite, and cl-format all call it if they need to. However if you want the state to be \npreserved across calls, you will want to wrap them with this. \n\nFor example, when you want to generate column-aware output with multiple calls to cl-format, \ndo it like in this example:\n\n    (defn print-table [aseq column-width]\n      (binding [*out* (get-pretty-writer *out*)]\n        (doseq [row aseq]\n          (doseq [col row]\n            (cl-format true \"~4D~7,vT\" col column-width))\n          (prn))))\n\nNow when you run:\n\n    user> (print-table (map #(vector % (* % %) (* % % %)) (range 1 11)) 8)\n\nIt prints a table of squares and cubes for the numbers from 1 to 10:\n\n       1      1       1    \n       2      4       8    \n       3      9      27    \n       4     16      64    \n       5     25     125    \n       6     36     216    \n       7     49     343    \n       8     64     512    \n       9     81     729    \n      10    100    1000",
+  :tips "TODO"},
+ :pp
+ {:brief "TODO",
+  :docjp
+  "A convenience macro that pretty prints the last thing output. This is\nexactly equivalent to (pprint *1).",
+  :tips "TODO"},
+ :pprint
+ {:brief "TODO",
+  :docjp
+  "Pretty print object to the optional output writer. If the writer is not provided, \nprint the object to the currently bound value of *out*.",
+  :tips "TODO"},
+ :pprint-indent
+ {:brief "TODO",
+  :docjp
+  "Create an indent at this point in the pretty printing stream. This defines how \nfollowing lines are indented. relative-to can be either :block or :current depending \nwhether the indent should be computed relative to the start of the logical block or\nthe current column position. n is an offset. \n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer.",
+  :tips "TODO"},
+ :pprint-logical-block
+ {:brief "TODO",
+  :docjp
+  "Execute the body as a pretty printing logical block with output to *out* which \nmust be a pretty printing writer. When used from pprint or cl-format, this can be \nassumed. \n\nThis function is intended for use when writing custom dispatch functions.\n\nBefore the body, the caller can optionally specify options: :prefix, :per-line-prefix, \nand :suffix.",
+  :tips "TODO"},
+ :pprint-newline
+ {:brief "TODO",
+  :docjp
+  "Print a conditional newline to a pretty printing stream. kind specifies if the \nnewline is :linear, :miser, :fill, or :mandatory. \n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer.",
+  :tips "TODO"},
+ :pprint-tab
+ {:brief "TODO",
+  :docjp
+  "Tab at this point in the pretty printing stream. kind specifies whether the tab\nis :line, :section, :line-relative, or :section-relative. \n\nColnum and colinc specify the target column and the increment to move the target\nforward if the output is already past the original target.\n\nThis function is intended for use when writing custom dispatch functions.\n\nOutput is sent to *out* which must be a pretty printing writer.\n\nTHIS FUNCTION IS NOT YET IMPLEMENTED.",
+  :tips "TODO"},
+ :print-length-loop
+ {:brief "TODO",
+  :docjp
+  "A version of loop that iterates at most *print-length* times. This is designed \nfor use in pretty-printer dispatch functions.",
+  :tips "TODO"},
+ :print-table
+ {:brief "TODO",
+  :docjp
+  "Prints a collection of maps in a textual table. Prints table headings\n   ks, and then a line of output for each row, corresponding to the keys\n   in ks. If ks are not specified, use the keys of the first item in rows.",
+  :tips "TODO"},
+ :set-pprint-dispatch
+ {:brief "TODO",
+  :docjp
+  "Set the pretty print dispatch function to a function matching (fn [obj] ...)\nwhere obj is the object to pretty print. That function will be called with *out* set\nto a pretty printing writer to which it should do its printing.\n\nFor example functions, see simple-dispatch and code-dispatch in \nclojure.pprint.dispatch.clj.",
+  :tips "TODO"},
+ :simple-dispatch
+ {:brief "TODO",
+  :docjp
+  "The pretty print dispatch function for simple data structure format.",
+  :tips "TODO"},
+ :with-pprint-dispatch
+ {:brief "TODO",
+  :docjp
+  "Execute body with the pretty print dispatch function bound to function.",
+  :tips "TODO"},
+ :write
+ {:brief "TODO",
+  :docjp
+  "Write an object subject to the current bindings of the printer control variables.\nUse the kw-args argument to override individual variables for this call (and any \nrecursive calls). Returns the string result if :stream is nil or nil otherwise.\n\nThe following keyword arguments can be passed with values:\n  Keyword              Meaning                              Default value\n  :stream              Writer for output or nil             true (indicates *out*)\n  :base                Base to use for writing rationals    Current value of *print-base*\n  :circle*             If true, mark circular structures    Current value of *print-circle*\n  :length              Maximum elements to show in sublists Current value of *print-length*\n  :level               Maximum depth                        Current value of *print-level*\n  :lines*              Maximum lines of output              Current value of *print-lines*\n  :miser-width         Width to enter miser mode            Current value of *print-miser-width*\n  :dispatch            The pretty print dispatch function   Current value of *print-pprint-dispatch*\n  :pretty              If true, do pretty printing          Current value of *print-pretty*\n  :radix               If true, prepend a radix specifier   Current value of *print-radix*\n  :readably*           If true, print readably              Current value of *print-readably*\n  :right-margin        The column for the right margin      Current value of *print-right-margin*\n  :suppress-namespaces If true, no namespaces in symbols    Current value of *print-suppress-namespaces*\n\n  * = not yet supported\n",
+  :tips "TODO"},
+ :write-out
+ {:brief "TODO",
+  :docjp
+  "Write an object to *out* subject to the current bindings of the printer control \nvariables. Use the kw-args argument to override individual variables for this call (and \nany recursive calls).\n\n*out* must be a PrettyWriter if pretty printing is enabled. This is the responsibility\nof the caller.\n\nThis method is primarily intended for use by pretty print dispatch functions that \nalready know that the pretty printer will have set up their environment appropriately.\nNormal library clients should use the standard \"write\" interface. ",
+  :tips "TODO"}}

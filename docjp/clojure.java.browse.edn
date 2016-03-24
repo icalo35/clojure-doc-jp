@@ -1,0 +1,3 @@
+{:*open-url-script* {:brief "TODO", :docjp nil, :tips "TODO"},
+ :browse-url
+ {:brief "TODO", :docjp "Open url in a browser", :tips "TODO"}}

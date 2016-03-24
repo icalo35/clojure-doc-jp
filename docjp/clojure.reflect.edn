@@ -1,0 +1,76 @@
+{:->AsmReflector
+ {:brief "TODO",
+  :docjp
+  "Positional factory function for class clojure.reflect.AsmReflector.",
+  :tips "TODO"},
+ :->Constructor
+ {:brief "TODO",
+  :docjp
+  "Positional factory function for class clojure.reflect.Constructor.",
+  :tips "TODO"},
+ :->Field
+ {:brief "TODO",
+  :docjp
+  "Positional factory function for class clojure.reflect.Field.",
+  :tips "TODO"},
+ :->JavaReflector
+ {:brief "TODO",
+  :docjp
+  "Positional factory function for class clojure.reflect.JavaReflector.",
+  :tips "TODO"},
+ :->Method
+ {:brief "TODO",
+  :docjp
+  "Positional factory function for class clojure.reflect.Method.",
+  :tips "TODO"},
+ :ClassResolver {:brief "TODO", :docjp nil, :tips "TODO"},
+ :Reflector
+ {:brief "TODO",
+  :docjp "Protocol for reflection implementers.",
+  :tips "TODO"},
+ :TypeReference
+ {:brief "TODO",
+  :docjp
+  "A TypeReference can be unambiguously converted to a type name on\n   the host platform.\n\n   All typerefs are normalized into symbols. If you need to\n   normalize a typeref yourself, call typesym.",
+  :tips "TODO"},
+ :do-reflect {:brief "TODO", :docjp nil, :tips "TODO"},
+ :flag-descriptors
+ {:brief "TODO",
+  :docjp
+  "The Java access bitflags, along with their friendly names and\nthe kinds of objects to which they can apply.",
+  :tips "TODO"},
+ :map->Constructor
+ {:brief "TODO",
+  :docjp
+  "Factory function for class clojure.reflect.Constructor, taking a map of keywords to field values.",
+  :tips "TODO"},
+ :map->Field
+ {:brief "TODO",
+  :docjp
+  "Factory function for class clojure.reflect.Field, taking a map of keywords to field values.",
+  :tips "TODO"},
+ :map->Method
+ {:brief "TODO",
+  :docjp
+  "Factory function for class clojure.reflect.Method, taking a map of keywords to field values.",
+  :tips "TODO"},
+ :reflect
+ {:brief "TODO",
+  :docjp
+  "Alpha - subject to change.\n   Reflect on the type of obj (or obj itself if obj is a class).\n   Return value and options are the same as for type-reflect. ",
+  :tips "TODO"},
+ :resolve-class
+ {:brief "TODO",
+  :docjp
+  "Given a class name, return that typeref's class bytes as an InputStream.",
+  :tips "TODO"},
+ :type-reflect
+ {:brief "TODO",
+  :docjp
+  "Alpha - subject to change.\n   Reflect on a typeref, returning a map with :bases, :flags, and\n  :members. In the discussion below, names are always Clojure symbols.\n\n   :bases            a set of names of the type's bases\n   :flags            a set of keywords naming the boolean attributes\n                     of the type.\n   :members          a set of the type's members. Each member is a map\n                     and can be a constructor, method, or field.\n\n   Keys common to all members:\n   :name             name of the type \n   :declaring-class  name of the declarer\n   :flags            keyword naming boolean attributes of the member\n\n   Keys specific to constructors:\n   :parameter-types  vector of parameter type names\n   :exception-types  vector of exception type names\n\n   Key specific to methods:\n   :parameter-types  vector of parameter type names\n   :exception-types  vector of exception type names\n   :return-type      return type name\n\n   Keys specific to fields:\n   :type             type name\n\n   Options:\n\n     :ancestors     in addition to the keys described above, also\n                    include an :ancestors key with the entire set of\n                    ancestors, and add all ancestor members to\n                    :members.\n     :reflector     implementation to use. Defaults to JavaReflector,\n                    AsmReflector is also an option.",
+  :tips "TODO"},
+ :typename
+ {:brief "TODO",
+  :docjp
+  "Returns Java name as returned by ASM getClassName, e.g. byte[], java.lang.String[]",
+  :tips "TODO"}}

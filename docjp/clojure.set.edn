@@ -1,0 +1,50 @@
+{:difference
+ {:brief "TODO",
+  :docjp
+  "Return a set that is the first set without elements of the remaining sets",
+  :tips "TODO"},
+ :index
+ {:brief "TODO",
+  :docjp
+  "Returns a map of the distinct values of ks in the xrel mapped to a\n  set of the maps in xrel with the corresponding values of ks.",
+  :tips "TODO"},
+ :intersection
+ {:brief "TODO",
+  :docjp "Return a set that is the intersection of the input sets",
+  :tips "TODO"},
+ :join
+ {:brief "TODO",
+  :docjp
+  "When passed 2 rels, returns the rel corresponding to the natural\n  join. When passed an additional keymap, joins on the corresponding\n  keys.",
+  :tips "TODO"},
+ :map-invert
+ {:brief "TODO",
+  :docjp "Returns the map with the vals mapped to the keys.",
+  :tips "TODO"},
+ :project
+ {:brief "TODO",
+  :docjp
+  "Returns a rel of the elements of xrel with only the keys in ks",
+  :tips "TODO"},
+ :rename
+ {:brief "TODO",
+  :docjp
+  "Returns a rel of the maps in xrel with the keys in kmap renamed to the vals in kmap",
+  :tips "TODO"},
+ :rename-keys
+ {:brief "TODO",
+  :docjp
+  "Returns the map with the keys in kmap renamed to the vals in kmap",
+  :tips "TODO"},
+ :select
+ {:brief "TODO",
+  :docjp "Returns a set of the elements for which pred is true",
+  :tips "TODO"},
+ :subset?
+ {:brief "TODO", :docjp "Is set1 a subset of set2?", :tips "TODO"},
+ :superset?
+ {:brief "TODO", :docjp "Is set1 a superset of set2?", :tips "TODO"},
+ :union
+ {:brief "TODO",
+  :docjp "Return a set that is the union of the input sets",
+  :tips "TODO"}}
